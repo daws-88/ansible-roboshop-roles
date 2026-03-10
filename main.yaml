@@ -1,0 +1,6 @@
+- name: "setup {{ item }} server"
+  hosts: "{{ item }}"
+  become: yes
+  roles:
+  - "{{ item }}"
+  
