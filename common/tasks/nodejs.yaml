@@ -9,7 +9,6 @@
     name: nodejs 
     state: present
 
-
 - name: Install packages and dependencies
   community.general.npm:
     path: /app
