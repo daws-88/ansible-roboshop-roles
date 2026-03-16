@@ -22,13 +22,18 @@
     path: /app
     state: directory
 
-- name: download {{ component }} applications
-  ansible.builtin.get_url:
-    url: https://roboshop-artifacts.s3.amazonaws.com/{{ componet }}-v3.zip 
-    dest: /tmp/{{ component }}.zip 
+- name: Delete {{ component }} file
+  ansible.builtin.file:
+    path: /tmp/{{ component }}.zip
+    state: absent
 
-- name: extract  application
+- name: download {{ component }} application
+  ansible.builtin.get_url:
+    url: https://roboshop-artifacts.s3.amazonaws.com/{{ component }}-v3.zip
+    dest: /tmp/{{ component }}.zip
+
+- name: extract {{ component }} application
   ansible.builtin.unarchive:
-    src: /tmp/{{ component }}.zip 
+    src: /tmp/{{ component }}.zip
     dest: /app
     remote_src: yes
