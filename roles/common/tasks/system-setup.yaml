@@ -7,4 +7,5 @@
 - name: strat and enable service
   ansible.builtin.service:
     name: "{{ component  }}"
+    state: restarted
     enabled: yes
