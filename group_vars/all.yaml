@@ -5,4 +5,5 @@ CATALOGUE_HOST: catalogue.daws88s.fun
 USER_HOST: user.daws88s.fun
 SHIPPING_HOST: shipping.daws88s.fun
 RABBITMQ_HOST: rabbitmq.daws88s.fun
-
+PAYMENT_HOST: payment.daws88s.fun
+CART_HOST: cart.daws88s.fun
