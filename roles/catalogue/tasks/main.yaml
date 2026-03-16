@@ -18,7 +18,6 @@
     name: mongodb-mongosh 
     state: present
 
-
 - name: connnect to mongodb catalogue
   ansible.builtin.command: mongosh {{ MONGODB_HOST }} --quiet --eval "db.getMongo().getDBNames().indexOf('catalogue')"
   register: catalogue_output
@@ -31,3 +30,4 @@
   ansible.builtin.import_role:
     name: common
     tasks_from: system-setup.yaml
+
