@@ -12,7 +12,7 @@
     path: /app
     state: absent
 
-- name: remove {{ componet }} file
+- name: remove {{ component }} file
   ansible.builtin.file:
     path: /tmp/{{ componet }}.zip 
     state: absent
