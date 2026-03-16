@@ -14,7 +14,7 @@
 
 - name: remove {{ component }} file
   ansible.builtin.file:
-    path: /tmp/{{ componet }}.zip 
+    path: /tmp/{{ component }}.zip 
     state: absent
 
 - name: create app direcrtory
@@ -22,13 +22,13 @@
     path: /app
     state: directory
 
-- name: download {{ componet }} applications
+- name: download {{ component }} applications
   ansible.builtin.get_url:
     url: https://roboshop-artifacts.s3.amazonaws.com/{{ componet }}-v3.zip 
-    dest: /tmp/{{ componet }}.zip 
+    dest: /tmp/{{ component }}.zip 
 
 - name: extract  application
   ansible.builtin.unarchive:
-    src: /tmp/{{ componet }}.zip 
+    src: /tmp/{{ component }}.zip 
     dest: /app
     remote_src: yes
