@@ -15,7 +15,7 @@
   loop:
     - cryptography
     - PyMySQL
-    
+
 - name: import shipping data into mysql
   community.mysql.mysql_db:
     state: import
@@ -33,7 +33,3 @@
    ansible.builtin.import_role:
     name: common
     tasks_from: system-setup.yaml
-
-
-
-
